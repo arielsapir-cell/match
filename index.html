@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -30,7 +31,7 @@ html, body { height: 100%; overflow: hidden; font-family: 'DM Sans', sans-serif;
 }
 
 /* SCREENS */
-.step { display:none; width:100%; flex-direction:column; align-items:center; justify-content:flex-start; position:relative; z-index:1; height:100vh; padding-top:2rem; }
+.step { display:none; width:100%; flex-direction:column; align-items:center; justify-content:flex-start; position:relative; z-index:1; height:100vh; padding:2rem 1.8rem; }
 .step.on { display:flex; }
 .step.slide-in { animation: slideIn .35s cubic-bezier(.22,1,.36,1); }
 .step.slide-back { animation: slideBack .35s cubic-bezier(.22,1,.36,1); }
@@ -38,7 +39,12 @@ html, body { height: 100%; overflow: hidden; font-family: 'DM Sans', sans-serif;
 @keyframes slideBack { from{opacity:0;transform:translateX(-40px)} to{opacity:1;transform:translateX(0)} }
 @keyframes fadeUp { from{opacity:0;transform:translateY(20px)} to{opacity:1;transform:translateY(0)} }
 
-.q-body { display:flex; flex-direction:column; align-items:center; flex:1; justify-content:center; width:100%; padding-bottom:7rem; }
+#step-intro { justify-content:center; }
+#step-loader { justify-content:center; }
+#step-thinking { justify-content:center; }
+#step-result { justify-content:center; overflow-y:auto; }
+
+.q-body { display:flex; flex-direction:column; align-items:center; justify-content:center; width:100%; flex:1; padding-bottom:5rem; }
 .q-footer { position:absolute; bottom:2rem; left:1.8rem; right:1.8rem; display:flex; flex-direction:column; align-items:center; gap:.4rem; }
 
 /* LOADER */
@@ -188,11 +194,11 @@ html, body { height: 100%; overflow: hidden; font-family: 'DM Sans', sans-serif;
 .think-pct{font-family:'DM Serif Display',serif;font-size:28px;font-weight:400;color:#a8e6ef;display:inline;vertical-align:super;line-height:1}
 .think-match-lbl{font-size:11px;color:rgba(255,255,255,.35);letter-spacing:2px;text-transform:uppercase;margin-top:.5rem}
 
-#step-intro { justify-content: center; padding-top: 0; }
-#step-thinking { justify-content: center; }
+.q-body { display:flex; flex-direction:column; align-items:center; justify-content:center; width:100%; padding-bottom:6rem; }
+.q-footer { position:absolute; bottom:2rem; left:1.8rem; right:1.8rem; display:flex; flex-direction:column; align-items:center; gap:.4rem; }
 
 /* RESULT */
-#step-result{overflow-y:auto;padding-top:2rem;padding-bottom:2rem;-webkit-overflow-scrolling:touch;justify-content:flex-start}
+
 .close-btn{position:absolute;top:1rem;right:1rem;width:32px;height:32px;border-radius:50%;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.15);color:rgba(255,255,255,.5);font-size:14px;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:all .2s;z-index:10}
 .close-btn:hover{background:rgba(255,255,255,.15);color:#fff}
 .res-score-wrap{margin-bottom:.4rem;animation:popIn .6s cubic-bezier(.34,1.56,.64,1)}
@@ -337,7 +343,7 @@ html, body { height: 100%; overflow: hidden; font-family: 'DM Sans', sans-serif;
   <div class="step" id="step-q4">
     <div class="prog"><div class="pd done"></div><div class="pd done"></div><div class="pd done"></div><div class="pd done"></div><div class="pd act"></div></div>
     <div class="q-body">
-      <div class="q-title">What traits matter most to you in a hire?</div>
+      <div class="q-title">What strengths matter most to you in a hire?</div>
       <div class="multi-grid">
         <button class="mopt" onclick="mpick(this,'n4')"><span class="check">✓</span>People person</button>
         <button class="mopt" onclick="mpick(this,'n4')"><span class="check">✓</span>Problem solver</button>
