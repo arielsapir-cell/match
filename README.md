@@ -1,81 +1,89 @@
 # 🎯 Match Quiz Template
 
-A beautiful, mobile-first interactive quiz that lets people discover if you're their perfect match — for jobs, collaborations, or anything else.
+An interactive quiz that lets people discover if you're their perfect match — for jobs, dates, collaborations, or anything else.
 
-**Works on mobile and web.**
-
----
-
-## Live Demo
-
-> *(Add a link to your deployed version here)*
+**Mobile + web. No code needed. Free to host.**
 
 ---
 
-## How to make your own in 3 steps
+## See it in action
 
-### 1. Fork or download this template
+[Live example →](https://arielsapir-cell.github.io/match)
 
-Click **Fork** on GitHub, or download the files and put them in a new folder.
+---
 
-### 2. Edit `config.js`
+## How it works
 
-Open `config.js` — this is the **only file you need to change**.
+Someone opens your link → answers a few questions → sees a match score and your contact buttons (LinkedIn / WhatsApp).
+
+That's it.
+
+---
+
+## Make your own in 3 steps
+
+### Step 1 — Get the files
+
+Click the green **Code** button above → **Download ZIP** → unzip it.
+
+You only need the `template/` folder. It has 2 files:
+- `index.html` — the quiz (don't touch this)
+- `config.js` — **this is the only file you edit**
+
+### Step 2 — Edit `config.js`
+
+Open `config.js` in any text editor (Notepad works fine) and fill in your details:
 
 ```js
 const CONFIG = {
-  name:       "Your Name",
-  role:       "Your Role · Your Specialty",
-  photo:      "photo.jpg",       // add your photo to the folder, or leave "" for initials
-  linkedin:   "https://linkedin.com/in/your-profile",
-  whatsapp:   "https://wa.me/your-number",
-  matchScore: 97,                // the % shown at the end (1–100)
+  name:       "Jane Smith",
+  role:       "UX Designer · Tel Aviv",
+  photo:      "photo.jpg",      // put your photo in the same folder, or "" for initials
+  linkedin:   "https://linkedin.com/in/jane-smith",
+  whatsapp:   "https://wa.me/972501234567",
+  matchScore: 95,               // the % shown at the end (1–100)
 
   questions: [
     {
-      emoji:    "🙋",
-      question: "Your question here?",
-      type:     "single",        // "single" = one answer, "multi" = multiple
-      options:  ["Strong yes", "Would be a great bonus"]
+      emoji:    "🎨",
+      question: "Do you need someone who turns complex problems into clean designs?",
+      type:     "single",       // "single" = pick one  |  "multi" = pick several
+      options:  ["That's exactly what I need", "Would be a great bonus"]
     },
-    // ... up to 7 questions
+    // add more questions here... max 7
   ]
 };
 ```
 
-**Rules:**
-- Maximum **7 questions**
-- Each question needs at least 2 options
-- `type: "single"` → user picks one answer
-- `type: "multi"` → user picks one or more (shown as a grid)
+### Step 3 — Preview & go live
 
-### 3. Deploy to GitHub Pages
+**Preview locally first:** just open `index.html` in Chrome, Firefox, or Safari — no setup needed.
 
-1. Push your files to a GitHub repo
-2. Go to **Settings → Pages → Source: main branch**
-3. Share your link 🎉
-
----
-
-## What you can customize
-
-| Setting | What it does |
-|---|---|
-| `name` | Your name (shown everywhere) |
-| `role` | Your title (shown on the result card) |
-| `photo` | Path to your photo file, or `""` for initials |
-| `linkedin` | LinkedIn button URL |
-| `whatsapp` | WhatsApp button URL |
-| `matchScore` | The % displayed at the end |
-| `questions` | Your questions (max 7) |
+**Go live for free with GitHub Pages:**
+1. Create a free account on [github.com](https://github.com)
+2. Create a new repository and upload your files (`index.html`, `config.js`, your photo)
+3. Go to **Settings → Pages → Source: main branch → Save**
+4. Your link will be: `https://your-username.github.io/your-repo-name`
+5. Share it 🎉
 
 ---
 
-## File structure
+## Question types
+
+| `type` | What it looks like | When to use |
+|---|---|---|
+| `"single"` | Vertical list, pick one | Yes/no or preference questions |
+| `"multi"` | Grid of chips, pick several | "What strengths matter most?" |
+
+Maximum **7 questions**. Extra ones are ignored automatically.
+
+---
+
+## Files
 
 ```
-your-repo/
-├── index.html    ← the quiz (no need to edit)
-├── config.js     ← edit this
-└── photo.jpg     ← add your photo here
+template/
+├── index.html    ← the quiz engine (no need to edit)
+├── config.js     ← edit this with your details and questions
+└── photo.jpg     ← add your photo here (optional)
 ```
