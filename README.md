@@ -16,7 +16,9 @@ An interactive quiz that lets people discover if you're their perfect match — 
 
 Someone opens your link → answers a few questions → sees a match score and your contact buttons (LinkedIn / WhatsApp).
 
-That's it.
+**There's only one outcome — you.**
+No matter what the user answers, they always land on your profile at the end.
+The questions aren't a filter — they're a conversation starter that builds engagement before showing your contact details.
 
 ---
 
